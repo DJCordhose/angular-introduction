@@ -4,30 +4,10 @@
         <div class="col-md-4">
             <form class="form" name="mortgageForm" ng-submit="calc()">
                 <h3>Mortgage Data</h3>
-                <div class="form-group">
-                    <label for="price">
-                        <span>House Price</span>
-                    </label>
-                    <input class="form-control" type="number" id="price" ng-model="price" min="1" step="1" required placeholder="House Price">
-                </div>
-                <div class="form-group">
-                    <label>
-                        <span>Down Payment</span>
-                    </label>
-                    <input class="form-control" type="number" id="down" ng-model="down" min="0" step="1" required placeholder="Down Payment">
-                </div>
-                <div class="form-group">
-                    <label>
-                        <span>Annual Interest Rate</span>
-                    </label>
-                    <input class="form-control" type="number" id="interest" ng-model="interest" min="0.1" step="0.1" required placeholder="%">
-                </div>
-                <div class="form-group">
-                    <label>
-                        <span>Term</span>
-                    </label>
-                    <input class="form-control" type="number" id="term" ng-model="term" min="1" step="1" required placeholder="Years">
-                </div>
+                <control-group model="price" name="House Price" min="1" step="1"></control-group>
+                <control-group model="down" name="Down Payment" min="0" step="1"></control-group>
+                <control-group model="interest" name="Annual Interest Rate" min="0.1" step="0.1"></control-group>
+                <control-group model="term" name="Term" min="1" step="1"></control-group>
                 <input type="submit" class="btn btn-primary" value="Calculate Mortgage" ng-disabled="mortgageForm.$invalid">
             </form>
         </div>
@@ -56,7 +36,7 @@
                     <label>
                         <span>Total Payment</span>
                     </label>
-                    <input class="form-control" id="total" ng-model="total" readonly>
+                    <input class="form-control" id="total" ng-model="result.total" readonly>
                 </div>
             </form>
         </div>
