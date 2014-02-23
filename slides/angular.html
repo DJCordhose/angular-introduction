@@ -1,0 +1,186 @@
+<!--http://localhost:63342/JavaScript%20Training/#/-->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>AngularJS</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+        <!--<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">-->
+        <link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">
+
+        <!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+        <script src="../reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+            <section>
+                <h1>HTML enhanced for web apps</h1>
+                <h3>Introduction to AngularJS with Yeoman</h3>
+                <p>
+                    <small><a href="http://zeigermann.eu">Oliver Zeigermann</a> / <a href="http://twitter.com/djcordhose">@DJCordhose</a></small>
+                </p>
+            </section>
+
+                <section>
+                    <h2>Angular</h2>
+                    <h3>HTML enhanced for web apps!</h3>
+                    <img src="angular.png">
+                    <p><a target="_blank" href="http://angularjs.org/">http://angularjs.org</a></p>
+                </section>
+            <section>
+                <h3>Concepts</h3>
+                <ul>
+                    <li class="fragment">Client Side Templates
+                    <li class="fragment">MVC (Model rather is a view-model)
+                    <li class="fragment">Three Ds
+                        <ul>
+                            <li class="fragment">Data Binding
+                            <li class="fragment">Dependency Injection
+                            <li class="fragment">Directives
+                        </ul>
+                </ul>
+            </section>
+
+                <section>
+                    <h3>Hello World #1</h3>
+<pre><code class="xml" contenteditable>&lt;html ng-app>
+&lt;head>
+    &lt;script src="angularjs/angular.min.js">&lt;/script>
+&lt;/head>
+&lt;body>
+    &lt;input ng-model="name">
+    &lt;p>Hello, {{name}}!&lt;/p>
+&lt;/body>
+&lt;/html></code></pre>
+                    <a href="../code/helloWorldAngular.html" target="_blank">Run</a>
+                </section>
+                <section>
+                    <h3>Hello World #2</h3>
+<pre><code class="xml" contenteditable>&lt;html ng-app>
+&lt;head>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js">&lt;/script>
+    &lt;script src="controller.js">&lt;/script>
+&lt;/head>
+&lt;body ng-controller="HelloController">
+    &lt;input ng-model="greeting.text">
+    &lt;p>{{greeting.text}}, World!&lt;/p>
+&lt;/body>
+&lt;/html></code></pre>
+<pre><code class="javascript" contenteditable>function HelloController($scope) {
+    $scope.greeting = {
+        text: 'Hello'
+    };
+}</code></pre>
+                    <a href="../code/helloWorldAngular2.html" target="_blank">Run</a>
+                </section>
+
+            <section>
+                <section>
+                    <h2>Yeoman</h2>
+					<h3>Modern Workflows For Modern Webapps</h3>
+                    <img src="yeoman.png">
+                    <p><a target="_blank" href="http://yeoman.io/">http://yeoman.io/</a></p>
+                </section>
+
+                <section>
+                    <h3>Creating a simple Angular project with yo</h3>
+<pre><code contenteditable># install node via http://nodejs.org/download/
+
+# Installation yo
+sudo npm install -g yo
+sudo npm install -g generator-angular
+
+# Create
+mkdir sandbox
+cd sandbox
+yo angular
+
+# Unit Tests
+grunt build test
+
+# Start
+grunt build serve
+</code></pre>
+                </section>
+            </section>
+            <section>
+                <h3>Live-Coding: Step #1</h3>
+                <ul>
+                    <li class="fragment"><code>Standard Directives</code>: HTML-Extensions
+                    <li class="fragment"><code>Scope</code>: Context containing model and logic, interface to Template
+                    <li class="fragment"><code>Controller</code>: Initializes Scope
+                </ul>
+            </section>
+            <section>
+                <h3>Live-Coding: Step #2</h3>
+                <ul>
+                    <li class="fragment"><code>Modules</code>: Encapsulates a part of the application, can import others
+                    <li class="fragment"><code>Routing</code>: Kapselt einen Teil der Anwendung, kann andere Teil importieren
+                    <li class="fragment"><code>Services</code>: Singletons to be used by other part of the app
+                    <li class="fragment"><code>Custom Directives</code>: Your custom HTML-Extensions
+                </ul>
+            </section>
+
+            <section>
+                <h3>Live-Coding: Step-3</h3>
+                <ul>
+                    <li class="fragment"><code>DI</code>: Inject services based on their name
+                    <li class="fragment"><code>Resources</code>: Access REST services in the most natural way
+                </ul>
+            </section>
+
+            </div>
+
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/../reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on ../reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
