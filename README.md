@@ -17,6 +17,15 @@ Steps
    * grunt build test
    * grunt serve
 1. Show this default application in Browser
+1. Optional: If there is an emphasis on Yeoman
+    * package.json / node / npm
+    * bower.json / .bowerrc
+    * Gruntfile.js
+    * grunt jshint
+      * .jshintrc zeigen
+    * dist-Verzeichnis
+      * Show src index.html
+      * Compare index.html in app to the one in dist
 1. Live-Coding #1: Standard Directives and Controllers
    * Show result of this step first: Fully functional calculator
    * Demonstrate calculator
