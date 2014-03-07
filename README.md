@@ -5,7 +5,7 @@ HTML enhanced for web apps - Introduction to AngularJS
 
 Preparation
 -----------
-* Open a console and switch to code folder
+* If there is an emphasis on Yeoman: Open a console and switch to code folder
 
 Steps
 -----
@@ -13,27 +13,27 @@ Steps
 1. Introduction
 1. Explain that this mainly is a live coding talk
 1. Slides until instructions how to create a project using yeoman
-1. Show how to run tests and server on console in dir 0-base
-   * grunt build test
-   * grunt serve
-1. Show this default application in Browser
 1. Optional: If there is an emphasis on Yeoman
+    * Show how to run tests and server on console in dir 0-base
+       * grunt build test
+       * grunt serve
+    * Show this default application in Browser
     * package.json / node / npm
     * bower.json / .bowerrc
     * Gruntfile.js
     * grunt jshint
-      * .jshintrc zeigen
+      * show .jshintrc
     * dist-Verzeichnis
       * Show src index.html
       * Compare index.html in app to the one in dist
 1. Live-Coding #1: Standard Directives and Controllers
    * Show result of this step first: Fully functional calculator
    * Demonstrate calculator
-   * Show artefacts to use in step-1
-   * Show were they go
+   * Show artifacts
      1. main.html -> views
         * ng-model
         * ng-submit
+        * ng-disabled
      1. main.js -> scripts/controllers
      1. calc.js -> scripts/services
 1. Live-Coding #2: Custom Directives and Services
@@ -58,4 +58,5 @@ Steps
       * switch service implementation -> 3-resource/app/index.html
       * Practical example for DI
       * DI also very practical for mocks in testing
+      * Show minified version in dist folder
 
