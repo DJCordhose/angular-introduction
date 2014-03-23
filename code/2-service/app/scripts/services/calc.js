@@ -2,7 +2,8 @@
 
 angular.module('baseApp').factory('calculatorService', function () {
     return {
-        calculateMortgage: function (price, down, interest, term, callback) {
+        calculateMortgage: function (price, down, interest, term,
+                                     callback) {
             var monthlyInterestRate = (interest / 100) / 12;
             var principle = price - down;
             var payments = term * 12;

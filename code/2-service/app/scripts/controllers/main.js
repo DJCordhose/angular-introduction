@@ -3,7 +3,9 @@
 angular.module('baseApp')
   .controller('MainCtrl', function ($scope, calculatorService) {
     function calc() {
-        calculatorService.calculateMortgage($scope.price, $scope.down, $scope.interest, $scope.term, function(result) {
+        calculatorService.calculateMortgage($scope.price,
+            $scope.down, $scope.interest, $scope.term,
+            function(result) {
             $scope.result = result;
         });
     }
