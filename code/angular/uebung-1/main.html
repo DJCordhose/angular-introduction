@@ -1,0 +1,64 @@
+<div class="container">
+    <h2>Mortgage Calculator</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <form class="form" name="mortgageForm">
+                <h3>Mortgage Data</h3>
+                <div class="form-group">
+                    <label for="price">
+                        <span>House Price</span>
+                    </label>
+                    <input class="form-control" type="number" id="price" min="1" step="1" required placeholder="House Price">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Down Payment</span>
+                    </label>
+                    <input class="form-control" type="number" id="down" min="0" step="1" required placeholder="Down Payment">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Annual Interest Rate</span>
+                    </label>
+                    <input class="form-control" type="number" id="interest" min="0.1" step="0.1" required placeholder="%">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Term</span>
+                    </label>
+                    <input class="form-control" type="number" id="term" min="1" step="1" required placeholder="Years">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Calculate Mortgage" ng-disabled="form.$invalid">
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form name="mortgageResultForm" class="form">
+                <h3>Mortgage Results</h3>
+                <div class="form-group">
+                    <label>
+                        <span>Mortgage Principle</span>
+                    </label>
+                    <input class="form-control" id="principle" readonly>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Number of Payments</span>
+                    </label>
+                    <input class="form-control" id="payments" readonly>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Monthly Payment</span>
+                    </label>
+                    <input class="form-control" id="monthly" readonly>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span>Total Payment</span>
+                    </label>
+                    <input class="form-control" id="total" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

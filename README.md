@@ -6,6 +6,7 @@ HTML enhanced for web apps - Introduction to AngularJS
 Preparation
 -----------
 * If there is an emphasis on Yeoman: Open a console and switch to code folder
+* Print this file formatted
 
 Steps
 -----
@@ -22,6 +23,7 @@ Steps
        * grunt build test
        * grunt serve
     * Show this default application in Browser
+    * Show live update
     * package.json / node / npm
     * bower.json / .bowerrc
     * Gruntfile.js
@@ -43,10 +45,10 @@ Steps
    1. module definition and routing part in complete
       * 1-resource/app/scripts/app.js
       * show relation of route to url
-1. Live-Coding #2: Custom Directives, Services, and Resources
-   1. Ask what people would improve upon
-     1. Repetition in HTML
-     1. Calculate function in global namespace
+1. Before next live coding: Ask what people would improve upon
+ 1. Repetition in HTML
+ 1. Calculate function in global namespace
+1. Live-Coding #2: Custom Directives, Services, DI, and Resources
    1. Show custom directive in step-2
      1. Use -> views/main.html
      1. Definition -> partials/control-group.html

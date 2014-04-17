@@ -1,3 +1,5 @@
+/*jshint unused:false */
+
 "use strict";
 
 function calculateMortgage(price, down, interest, term) {

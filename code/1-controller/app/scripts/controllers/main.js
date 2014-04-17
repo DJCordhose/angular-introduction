@@ -1,3 +1,5 @@
+/* global calculateMortgage */
+
 'use strict';
 
 angular.module('baseApp')
