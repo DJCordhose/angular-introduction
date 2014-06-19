@@ -11,7 +11,8 @@
 
 		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
         <!--<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">-->
-        <link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">
+        <!--<link rel="stylesheet" href="../reveal.js/css/theme/moon.css" id="theme">-->
+        <link rel="stylesheet" href="../reveal.js/css/theme/night.css" id="theme">
 
         <!-- For syntax highlighting -->
 		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
@@ -97,6 +98,30 @@
 }</code></pre>
                     <a href="../code/angular/helloWorldAngular2.html" target="_blank">Run</a>
                 </section>
+                <section>
+                    <h3>Hello World #3</h3>
+<pre><code class="xml" contenteditable>&lt;html ng-app>
+&lt;head>
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js">&lt;/script>
+    &lt;script src="controller.js">&lt;/script>
+&lt;/head>
+&lt;body ng-controller="HelloController as helloController">
+    &lt;input ng-model="helloController.greeting.text">
+    &lt;p>{{helloController.greeting.text}}, World!&lt;/p>
+    &lt;input type="button" value="Click" ng-click="helloController.func()">
+    &lt;/body>
+&lt;/html></code></pre>
+<pre><code class="javascript" contenteditable>function HelloController() {
+    this.greeting = {
+        text: 'Hello'
+    };
+}
+HelloController.prototype.func = function() {
+    this.greeting.text = "Soso";
+};
+</code></pre>
+                    <a href="../code/angular/helloWorldAngular3.html" target="_blank">Run</a>
+                </section>
 
             <section>
                 <section>
@@ -126,6 +151,26 @@ grunt build test
 grunt build serve
 </code></pre>
                 </section>
+                    <section>
+                        <h3>Live-Demo #1: Tests in WebStorm</h3>
+                        <ul>
+                            <li>Open application in WebStorm
+                            <li>Execute tests <code>karma.conf.js</code> (right mouse click on file)
+                            <li>Locate matching Jasmine-Testsuite
+                            <li>Add failing test, e.g. <code>expect(scope.awesomeThings[0]).toBe("Olli");</code>
+                            <li>Find matching controller and make test pass
+                            <li>Ensure changes are reflected in Browser immediately
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Live-Demo #2: Build</h3>
+                        <ul>
+                            <li>Execute task <code>grunt jshint</code> and make it fail
+                            <li>Inspect <code>Gruntfile.js</code> to identify <code>jshint</code> task - where is the configuration file?
+                            <li>Change configuration file to make <code>grunt jshint</code> pass
+                            <li>Compare <code>index.html</code> in <code>app</code> folder with the one in <code>dist</code> folder
+                        </ul>
+                    </section>
             </section>
             <section>
                 <h3>Live-Coding #1</h3>

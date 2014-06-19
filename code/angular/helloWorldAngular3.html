@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app>
+<head>
+</head>
+<body>
+    <div ng-controller="HelloController as helloController">
+        <input ng-model='helloController.greeting.text'>
+        <p><span ng-bind="helloController.greeting.text"></span>, World!</p>
+        <input type="button" value="Klick mich" ng-click="helloController.func()">
+    </div>
+    <script src="angular/angular.min.js"></script>
+    <script src="controllerAs.js"></script>
+</body>
+</html>

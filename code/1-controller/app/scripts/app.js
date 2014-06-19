@@ -1,9 +1,7 @@
 'use strict';
 
 angular.module('baseApp', [
-  'ngCookies',
   'ngResource',
-  'ngSanitize',
   'ngRoute'
 ])
   .config(function ($routeProvider) {
